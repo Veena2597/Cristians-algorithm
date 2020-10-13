@@ -1,5 +1,6 @@
 import socket
 import threading
+import datetime
 
 HEADER = 64
 PORT = 5050  # Figure out more about port configurations
@@ -19,6 +20,8 @@ def handle_client(connection, address):
 
     connected = True
     while connected:
+        connection.send(str(datetime.datetime.now()).encode(FORMAT))
+        '''
         msg_length = connection.recv(HEADER).decode(FORMAT)
         if msg_length:
             msg_length = int(msg_length)
@@ -26,7 +29,7 @@ def handle_client(connection, address):
             if msg == DISCONNECT_MESSAGE:
                 connected = False
             print(f"[{address}] {msg}")
-            connection.send("Message Received".encode(FORMAT))
+            connection.send("Message Received".encode(FORMAT))'''
 
     connection.close()
 
@@ -36,6 +39,7 @@ def start():
     print(f"[LISTENING] Server is listening on {SERVER}")
     while True:
         connection, address = server.accept()
+        print(f"[ACTIVE CONNECTION] Connected to {address}")
         thread = threading.Thread(target=handle_client, args=(connection, address))
         thread.start()
         print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
