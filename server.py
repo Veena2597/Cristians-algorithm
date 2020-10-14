@@ -1,6 +1,5 @@
 import socket
 import threading
-import datetime
 
 HEADER = 64
 PORT = 5050  # Figure out more about port configurations
