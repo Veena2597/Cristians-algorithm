@@ -16,7 +16,7 @@ CLOCK_REQUEST = "SYNCHRONIZE"
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 
-def sendClock(message):
+def send(message):
     msg = message.encode(FORMAT)
     msg_length = len(msg)
     send_length = str(msg_length).encode(FORMAT)

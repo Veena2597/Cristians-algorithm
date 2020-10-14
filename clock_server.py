@@ -10,7 +10,7 @@ FORMAT = 'utf-8'
 CLOCK_REQUEST = "SYNCHRONIZE"
 
 
-def sendTime():
+def sendTime(connection, address):
     connected = True
     while connected:
         msg = connection.recv(1024).decode(FORMAT)
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     while True:
         connection, address = clock.accept()
         print(f"[NEW CONNECTION] {address} connected")
-        thread = threading.Thread(target=sendTime(), args=(connection, address))
+        thread = threading.Thread(target=sendTime, args=(connection, address))
         thread.start()
-
+        print(f"[ACTIVE CONNECTIONS] {threading.active_count() - 1}")
     clock.close()
