@@ -20,8 +20,6 @@ def handle_client(connection, address):
 
     connected = True
     while connected:
-        connection.send(str(datetime.datetime.now()).encode(FORMAT))
-        '''
         msg_length = connection.recv(HEADER).decode(FORMAT)
         if msg_length:
             msg_length = int(msg_length)
@@ -29,7 +27,7 @@ def handle_client(connection, address):
             if msg == DISCONNECT_MESSAGE:
                 connected = False
             print(f"[{address}] {msg}")
-            connection.send("Message Received".encode(FORMAT))'''
+            connection.send("Message Received".encode(FORMAT))
 
     connection.close()
 
