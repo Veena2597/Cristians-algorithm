@@ -5,6 +5,7 @@ from dateutil import parser
 from timeit import default_timer
 import threading
 import logging
+import pickle
 import sys
 
 HEADER = 64
@@ -17,8 +18,10 @@ DISCONNECT_MESSAGE = "DISCONNECTED"
 CLOCK_REQUEST = "SYNCHRONIZE"
 CLIENTS_LIST = {'CLIENT1': 5051, 'CLIENT2': 5052, 'CLIENT3': 5053}
 
-logging.basicConfig(filename='client3.log', level=logging.DEBUG)
 
+logging.basicConfig(filename='client1.log', level=logging.DEBUG)
+clock_server_time = 0
+client_time_at_sync = 0
 bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 clock_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -109,38 +112,56 @@ def broadcastTransaction():
     pass
 
 
-def inputTransactions():
+def inputTransactions(client_socks):
+    global client_time_at_sync
+    global buffer
+
     while True:
-        raw_type = input("Please enter your transaction type:")
-        if raw_type == 't':
-            raw_data = input("Enter transaction")
-            if raw_data:
-                pass  # update blockchain and traverse it till the current node. Check amount and validity of transaction
-        elif raw_type == 'b':
+        raw_type = input("Please enter your transaction:")
+        s = raw_type.split(' ')
+        print(s)
+
+        if s[0] == 't':
+            timestamp = clientClock()
+            tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
+            b = pickle.dumps(tran)
+            buffer.append(b)
+
+            for sock in range(len(client_socks)):
+                sock.send(bytes(b))
+
+            connect_socket.send(bytes(b))
+            print(client_time_at_sync)
+            # update blockchain and traverse it till the current node. Check amount and validity of transaction
+        elif s[0] == 'b':
             pass
 
 
 if __name__ == '__main__':
+    block = Blockchain()
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
     clock_socket.connect((SERVER, 5050))
+    client_sockets = []
     for i in range(1, 4):
         if i != 3:
             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             connect_socket.connect_ex((SERVER, 5050 + i))
-            print(5050 + i)
+            client_sockets.append(connect_socket)
 
     clock_thread = threading.Thread(target=synchronizeTime)
     clock_thread.start()
-    my_transactions = threading.Thread(target=inputTransactions)
+    my_transactions = threading.Thread(target=inputTransactions, args=client_sockets)
     my_transactions.start()
     while True:
         connection, address = bind_socket.accept()
         logging.debug("[CLIENT CONNECTED] {}".format(str(connection)))
-        '''
+        print(connection)
+
         listen_transactions = threading.Thread(target=listenTransaction, args=connection)
         listen_transactions.start()
+        '''
         broadcast_transaction = threading.Thread(target=broadcastTransaction, args=connection)
         broadcast_transaction.start()'''
     clock_socket.close()
