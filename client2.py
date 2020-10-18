@@ -42,11 +42,28 @@ class Blockchain:
 
     def push(self, timestamp, amount, sender, receiver):
         node = Node(timestamp, amount, sender, receiver)
-        node.next = self.head
-        self.head = node
+        if self.head is None:
+            self.head = node
+            return
+
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = node
 
     def traverse(self):
-        pass
+        temp = self.head
+        balance = 10
+        validity = 1
+        while temp:
+            if temp.sender == 'B':
+                balance = balance - temp.amount
+            elif temp.receiver == 'B':
+                balance = balance + temp.amount
+            temp = temp.next
+        if balance < 0:
+            validity = 0
+        return validity, balance
 
 
 def clientClock():
