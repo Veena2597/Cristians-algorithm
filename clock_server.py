@@ -1,6 +1,7 @@
 import socket
 import datetime
 import threading
+import sys
 
 PORT = 5050  # Figure out more about port configurations
 # SERVER = "169.231.16.166"
@@ -24,6 +25,7 @@ def sendTime(connection, address):
 if __name__ == '__main__':
     # Creating the clock server socket
     clock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    clock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     print("f[CLOCK SERVER] Successfully created")
 
     # Binding the clock server socket to the address - defined globally
@@ -32,10 +34,17 @@ if __name__ == '__main__':
     # The clock server keeps listening for different clients
     clock.listen()
     print("f[CLOCK SERVER] Clock server is listening")
-
+    clients_list = []
     while True:
         # Clock server accepts new clients and creates a new thread for each client
         connection, address = clock.accept()
+        print(connection)
+        '''if connection:
+            clients_list.append(connection)
+        for i in clients_list:
+            temp = str(clients_list)
+            i.send(str.encode(FORMAT))
+        print(sys.getsizeof(clients_list))'''
         print(f"[CLOCK SERVER]  New client connected with address: {address}")
         thread = threading.Thread(target=sendTime, args=(connection, address))
         thread.start()
