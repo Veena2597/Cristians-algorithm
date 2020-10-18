@@ -73,7 +73,7 @@ def synchronizeTime():
         logging.debug("[CLIENT CLOCK] Time before synchronization {}s".format(str(actual_time)))
 
         client_time_at_sync= clock_server_time + datetime.timedelta(seconds=(delay) / 2)  # Calculated with Cristian's algorithm
-        logging.debug("[CLIENT CLOCK] Time after synchronization {}s".format(str(client_time)))
+        logging.debug("[CLIENT CLOCK] Time after synchronization {}s".format(str(client_time_at_sync)))
 
         error = actual_time - client_time_at_sync
         logging.debug("[CLIENT CLOCK] Synchronization error {}s".format(str(error.total_seconds())))
@@ -83,8 +83,10 @@ def synchronizeTime():
         #return client_time_at_sync
 
 
-def listenTransaction():
+def listenTransaction(connection):
     # connection.recv, update the local buffer
+    msg = connection.recv(1024).decode(FORMAT)
+    print(msg)
     pass
 
 
@@ -93,7 +95,7 @@ def broadcastTransaction():
 
 
 def inputTransactions():
-    global client_time
+    global client_time_at_sync
     while True:
         raw_type = input("Please enter your transaction type:")
         s = raw_type.split(' ')
@@ -105,7 +107,7 @@ def inputTransactions():
             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             connect_socket.connect_ex((SERVER, 5052))
-            print(client_time)
+            print(client_time_at_sync)
             connect_socket.send(bytes(b))
 
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
@@ -132,10 +134,10 @@ if __name__ == '__main__':
         connection, address = bind_socket.accept()
         logging.debug("[CLIENT CONNECTED] {}".format(str(connection)))
         print(connection)
-        msg = connection.recv(1024).decode(FORMAT)
-        print(msg)
-        # listen_transactions = threading.Thread(target=listenTransaction, args=connection)
-        # listen_transactions.start()
+
+
+        listen_transactions = threading.Thread(target=listenTransaction, args=connection)
+        listen_transactions.start()
         #
         # broadcast_transaction = threading.Thread(target=broadcastTransaction, args=connection)
         # broadcast_transaction.start()

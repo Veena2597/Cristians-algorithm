@@ -8181,3 +8181,1005 @@ DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0014472000000
 DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:14:56.379420s
 DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:14:56.379110s
 DEBUG:root:[CLIENT CLOCK] Synchronization error 0.00031s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1800.710051
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:15:16.381731
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009677999998984887s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:15:16.381731s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:15:16.382215s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000484s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1820.7132328
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:15:36.385199
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010412999999971362s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:15:36.385199s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:15:36.385720s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000521s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1840.718254
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:15:56.389873
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001337800000101197s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:15:56.389873s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:15:56.390542s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000669s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1860.7257278
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:16:16.397333
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001071700000011333s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:16:16.397333s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:16:16.397869s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000536s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1880.7338382
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:16:36.405468
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009460999999646447s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:16:36.405468s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:16:36.405941s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000473s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1900.7415049
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:16:56.413137
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010429999999814754s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:16:56.413137s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:16:56.413658s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000521s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1920.7445764
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:17:16.416179
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010960000001887238s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:17:16.416179s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:17:16.416727s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000548s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1940.7519841
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:17:36.423658
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0013031999999384425s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:17:36.423658s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:17:36.424310s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000652s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1960.7590118
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:17:56.430686
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010879999999815482s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:17:56.430686s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:17:56.431230s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000544s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1980.7609455
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:18:16.432614
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0011680000000069413s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:18:16.432614s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:18:16.433198s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000584s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2000.7684997
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:18:36.440119
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009905000001708686s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:18:36.440119s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:18:36.440614s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000495s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2020.7749913
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:18:56.446553
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001077099999974962s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:18:56.446553s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:18:56.447092s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000539s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2040.7834993
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:19:16.455126
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009830000001329608s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:19:16.455126s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:19:16.455618s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000492s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2060.7922918
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:19:36.463885
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0011410000001887965s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:19:36.463885s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:19:36.464456s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000571s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2080.799455
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:19:56.471109
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012383000002955669s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:19:56.471109s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:19:56.471728s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000619s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2100.8046761
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:20:16.476249
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0013515999999071937s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:20:16.476249s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:20:16.476925s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000676s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2120.8093864
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:20:36.481058
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012832999996135186s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:20:36.481058s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:20:36.481700s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000642s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2140.8146568
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:20:56.486241
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010371999997005332s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:20:56.486241s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:20:56.486760s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000519s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2160.8169335
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:21:16.488603
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010858000000553147s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:21:16.488603s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:21:16.489146s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000543s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2180.820491
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:21:36.492160
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0014329999999063148s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:21:36.492160s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:21:36.492876s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000716s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2200.8305962
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:21:56.502206
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010621999999784748s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:21:56.502206s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:21:56.502737s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000531s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2220.8329733
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:22:16.504637
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012593999999808148s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:22:16.504637s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:22:16.505267s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.00063s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2240.8364122
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:22:36.508086
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010816000003615045s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:22:36.508086s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:22:36.508627s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000541s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2260.8419553
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:22:56.513578
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001348000000234606s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:22:56.513578s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:22:56.514252s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000674s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2280.848675
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:23:16.520266
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012514999998529674s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:23:16.520266s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:23:16.520892s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000626s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2300.8539931
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:23:36.525625
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001137499999913416s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:23:36.525625s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:23:36.526194s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000569s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2320.8631451
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:23:56.534739
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0011205999999219785s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:23:56.535910s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:23:56.535299s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000611s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2340.8684626
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:24:16.540128
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012673999999606167s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:24:16.540128s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:24:16.540762s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000634s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2360.8787839
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:24:36.550402
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010549999997238046s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:24:36.550402s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:24:36.550929s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000527s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2380.886993
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:24:56.558938
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008567999998376763s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:24:56.558938s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:24:56.559366s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000428s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2400.8902852
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:25:16.561948
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010171999997510284s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:25:16.561948s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:25:16.562457s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000509s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2420.8996683
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:25:36.571505
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008668000000398024s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:25:36.571505s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:25:36.571938s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000433s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2440.9089427
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:25:56.581229
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0014874000003146648s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:25:56.581229s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:25:56.581973s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000744s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2460.9196822
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:26:16.591535
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.00104460000011386s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:26:16.591535s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:26:16.592057s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000522s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2480.9276815
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:26:36.599265
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009693000001789187s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:26:36.599265s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:26:36.599750s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000485s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2500.9351698
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:26:56.607314
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0016866999999365362s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:26:56.607809s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:26:56.608157s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000348s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 4.9283732
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:27:04.557346
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0022826999999994158s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:27:04.560633s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:27:04.558487s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.002146s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2520.9420731
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:27:16.613596
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009734000000207743s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:27:16.613596s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:27:16.614083s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000487s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 24.9406658
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:27:24.572174
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002544999999997799s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:27:24.572174s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:27:24.573446s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001272s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2.9127575
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:27:35.580772
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.00381129999999974s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:27:35.580772s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:27:35.582678s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001906s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2540.9500867
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:27:36.622273
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0011660000000119908s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:27:36.622273s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:27:36.622856s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000583s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 22.9290829
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:27:55.598335
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0028991000000004874s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:27:55.599726s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:27:55.599785s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -5.9e-05s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2560.9540659
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:27:56.625601
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007617999999638414s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:27:56.626294s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:27:56.625982s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000312s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 42.9371777
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:28:15.605981
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002885300000002644s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:28:15.605981s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:28:15.607424s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001443s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2580.9578868
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:28:16.629548
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008577000003242574s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:28:16.629548s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:28:16.629977s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000429s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 62.9437797
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:28:35.612665
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0023569000000023266s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:28:35.612665s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:28:35.613843s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001178s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2600.9625984
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:28:36.634177
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009819000001698441s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:28:36.634177s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:28:36.634668s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000491s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 82.9557908
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:28:55.623870
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.00213169999999252s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:28:55.623870s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:28:55.624936s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001066s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2620.9710891
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:28:56.642673
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.00096960000018953s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:28:56.642673s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:28:56.643158s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000485s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 102.9615192
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:29:15.630292
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0027366999999998143s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:29:15.630292s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:29:15.631660s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001368s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2640.9774196
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:29:16.649024
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0011497000000417756s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:29:16.650148s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:29:16.649599s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000549s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 122.9718319
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:29:35.640720
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002006899999997813s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:29:35.640720s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:29:35.641723s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001003s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2660.9868957
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:29:36.658695
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001235000000178843s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:29:36.658695s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:29:36.659313s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000618s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 142.9813839
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:29:55.650242
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002570399999996198s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:29:55.652145s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:29:55.651527s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000618s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2680.9890622
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:29:56.660929
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009130000003096939s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:29:56.660929s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:29:56.661386s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000457s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 162.9870384
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:30:15.656357
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0036948999999992793s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:30:15.658843s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:30:15.658204s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000639s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2700.9923015
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:30:16.669163
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.006362500000250293s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:30:16.669163s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:30:16.672344s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.003181s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 182.9958872
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:30:35.664647
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002426700000000892s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:30:35.664647s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:30:35.665860s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001213s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2721.0074342
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:30:36.679079
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008483000001433538s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:30:36.679079s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:30:36.679503s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000424s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 203.0034766
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:30:55.672342
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0019518999999945663s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:30:55.674309s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:30:55.673318s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000991s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2741.0154269
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:30:56.687018
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008874000000105298s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:30:56.687018s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:30:56.687462s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000444s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 223.0109588
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:31:15.680133
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0019546000000048025s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:31:15.680133s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:31:15.681110s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000977s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2761.0174406
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:31:16.689021
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001170300000012503s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:31:16.689021s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:31:16.689606s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000585s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 243.0166277
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:31:35.685456
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0021873000000027787s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:31:35.685456s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:31:35.686550s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001094s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2781.0238859
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:31:36.695463
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008496000000377535s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:31:36.695463s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:31:36.695888s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000425s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 263.0218018
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:31:55.690942
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0031002000000057706s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:31:55.692887s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:31:55.692492s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000395s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2801.0300571
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:31:56.701622
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008000000002539309s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:31:56.701622s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:31:56.702022s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.0004s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 283.0331212
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:32:15.701995
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0022024000000442356s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:32:15.701995s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:32:15.703096s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001101s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2821.0390642
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:32:16.715902
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.00630749999982072s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:32:16.715902s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:32:16.719056s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.003154s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 303.0420802
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:32:35.713678
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.00756240000004027s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:32:35.713678s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:32:35.717459s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.003781s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2841.0473158
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:32:36.719250
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0013902999999118038s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:32:36.720244s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:32:36.719945s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000299s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 323.0555246
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:32:55.724308
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0023954999999773463s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:32:55.724308s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:32:55.725506s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001198s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2861.0525151
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:32:56.724109
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.00101619999986724s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:32:56.724109s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:32:56.724617s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000508s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 343.0600596
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:33:15.728886
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0026950000000169894s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:33:15.730487s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:33:15.730234s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000253s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2881.0580891
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:33:16.729833
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0013878999998269137s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:33:16.730862s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:33:16.730527s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000335s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 363.0677112
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:33:35.736455
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0021507999999812455s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:33:35.736455s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:33:35.737530s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001075s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2901.0632265
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:33:36.734816
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.000981200000296667s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:33:36.734816s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:33:36.735307s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000491s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 383.0801107
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:33:55.748948
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0021999000000505475s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:33:55.748948s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:33:55.750048s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.0011s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2921.0651351
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:33:56.736763
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.000957899999775691s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:33:56.736763s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:33:56.737242s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000479s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 403.0857352
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:34:15.754800
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002327500000035343s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:34:15.755298s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:34:15.755964s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000666s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2941.075415
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:34:16.747007
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009096000003410154s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:34:16.747007s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:34:16.747462s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000455s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 423.0925064
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:34:35.761333
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002140800000006493s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:34:35.761333s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:34:35.762403s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.00107s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2961.0814391
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:34:36.753607
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009469999999964784s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:34:36.753607s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:34:36.754080s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000473s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 443.0962721
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:34:55.765598
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002831700000001547s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:34:55.766095s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:34:55.767014s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000919s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 2981.0884452
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:34:56.760015
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010034000001724053s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:34:56.760015s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:34:56.760517s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000502s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 463.1058495
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:35:15.774668
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0022772000000372827s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:35:15.774668s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:35:15.775807s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001139s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3001.091159
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:35:16.762770
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0014722999999321473s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:35:16.763921s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:35:16.763506s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000415s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 483.1222557
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:35:35.791001
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0020085000000449327s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:35:35.791703s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:35:35.792005s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000302s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3021.0978506
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:35:36.769422
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0011349999999765714s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:35:36.769422s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:35:36.769989s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000567s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 503.1301309
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:35:55.799000
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002236500000037722s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:35:55.799000s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:35:55.800118s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001118s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3041.1033072
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:35:56.774900
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012020999997730542s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:35:56.774900s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:35:56.775501s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000601s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 523.1363179
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:36:15.805648
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0024137999999993554s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:36:15.807384s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:36:15.806855s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000529s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3061.1079621
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:36:16.779584
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010836000001290813s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:36:16.779584s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:36:16.780126s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000542s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 543.1415906
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:36:35.810474
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0023558000000321044s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:36:35.810474s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:36:35.811652s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001178s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3081.1159595
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:36:36.787958
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0020582000001923006s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:36:36.787958s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:36:36.788987s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001029s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 563.1463847
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:36:55.815864
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002373600000055376s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:36:55.816361s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:36:55.817051s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.00069s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3101.1190104
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:36:56.790644
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001088399999844114s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:36:56.790644s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:36:56.791188s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000544s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 583.1557546
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:37:15.824289
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0021540999999842825s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:37:15.824289s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:37:15.825366s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001077s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3121.1244862
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:37:16.801328
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0077197000000523985s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:37:16.801328s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:37:16.805188s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.00386s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 603.1684757
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:37:35.837230
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0024718999999322477s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:37:35.837230s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:37:35.838466s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001236s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3141.1400285
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:37:36.811590
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010651000002326327s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:37:36.811590s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:37:36.812123s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000533s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 623.1812449
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:37:55.855293
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.007324499999981526s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:37:55.855293s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:37:55.858955s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.003662s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3161.1445754
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:37:56.816641
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001034599999911734s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:37:56.817136s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:37:56.817158s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -2.2e-05s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 643.1927374
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:38:15.862126
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.003054899999938243s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:38:15.862779s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:38:15.863653s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000874s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3181.1492511
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:38:16.820880
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012928999999530788s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:38:16.821771s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:38:16.821526s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000245s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 663.2044741
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:38:35.875326
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.003933000000074571s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:38:35.877197s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:38:35.877293s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -9.6e-05s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3201.1529207
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:38:36.824425
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0014043999999557855s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:38:36.824425s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:38:36.825127s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000702s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 683.2136151
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:38:55.883929
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.004165000000057262s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:38:55.883929s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:38:55.886012s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.002083s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3221.1612801
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:38:56.833111
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002505899999960093s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:38:56.833111s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:38:56.834364s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001253s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 703.227404
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:39:15.896695
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.004181600000038088s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:39:15.899781s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:39:15.898786s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000995s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3241.1684531
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:39:16.840098
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009245999999620835s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:39:16.840098s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:39:16.840560s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000462s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 723.238177
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:39:35.906938
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002201400000103604s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:39:35.906938s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:39:35.908039s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001101s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3261.1721617
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:39:36.844295
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012538000000859029s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:39:36.844295s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:39:36.844922s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000627s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 743.2487558
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:39:55.918139
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002059400000007372s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:39:55.918139s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:39:55.919169s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.00103s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3281.1818339
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:39:56.853429
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.000942299999678653s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:39:56.853429s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:39:56.853900s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000471s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 763.2604798
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:40:15.929524
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001933200000053148s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:40:15.929524s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:40:15.930491s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000967s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3301.1851787
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:40:16.857310
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0011878999998771178s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:40:16.857805s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:40:16.857904s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -9.9e-05s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 783.2660797
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:40:35.935267
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002175200000010591s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:40:35.935267s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:40:35.936355s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.001088s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3321.1899313
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:40:36.862008
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.001316400000177964s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:40:36.862504s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:40:36.862666s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000162s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 803.2721692
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:40:55.941032
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.002140299999950912s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:40:55.941032s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:40:55.942102s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.00107s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3341.1926319
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:40:56.864842
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0014283999998951913s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:40:56.865334s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:40:56.865556s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000222s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 823.2762651
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:41:15.945155
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010668999999552398s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:41:15.946147s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:41:15.945688s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000459s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3361.1954429
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:41:16.867097
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.00046559999964301824s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:41:16.867097s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:41:16.867330s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000233s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 843.2793297
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:41:35.948123
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0014372000000548724s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:41:35.949084s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:41:35.948842s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000242s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3381.1969491
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:41:36.868652
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0005525000001398439s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:41:36.868652s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:41:36.868928s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000276s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 863.2816525
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:41:55.950478
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008019000000558663s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:41:55.950478s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:41:55.950879s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000401s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3401.1986965
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:41:56.870310
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.000732399999833433s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:41:56.870310s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:41:56.870676s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000366s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 883.2838022
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:42:15.952713
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009236000000782951s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:42:15.952713s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:42:15.953175s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000462s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3421.2013294
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:42:16.872953
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007229000002553221s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:42:16.872953s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:42:16.873314s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000361s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 903.2864424
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:42:35.955338
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0011428999999907319s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:42:35.956335s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:42:35.955909s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000426s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3441.2024466
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:42:36.874152
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0005310000001372828s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:42:36.874152s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:42:36.874418s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000266s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 923.2893923
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:42:55.958215
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012570000000096115s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:42:55.959150s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:42:55.958844s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000306s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3461.2039548
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:42:56.881560
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.006412700000055338s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:42:56.881560s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:42:56.884766s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.003206s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 943.2920881
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:43:15.960921
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0013258000000178072s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:43:15.961894s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:43:15.961584s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.00031s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3481.2118514
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:43:16.883470
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0005396000001383072s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:43:16.883470s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:43:16.883740s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.00027s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 963.2948882
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:43:35.963630
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010550000000648652s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:43:35.964602s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:43:35.964158s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000444s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3501.2129657
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:43:36.884677
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008234000001721142s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:43:36.884677s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:43:36.885089s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000412s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 983.296733
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:43:55.965583
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.00110779999999977s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:43:55.966607s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:43:55.966137s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.00047s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3521.2143936
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:43:56.886098
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007726999997430539s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:43:56.886098s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:43:56.886484s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000386s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1003.2985156
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:44:15.967365
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012401000000181739s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:44:15.968365s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:44:15.967985s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.00038s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3541.2163556
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:44:16.888026
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007157999998526066s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:44:16.888026s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:44:16.888384s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000358s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1023.301106
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:44:35.970019
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008122000000412299s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:44:35.970019s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:44:35.970425s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000406s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3561.218016
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:44:36.889719
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008214000004045374s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:44:36.889719s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:44:36.890130s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000411s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1043.3029228
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:44:55.971646
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0010044000000561937s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:44:55.972643s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:44:55.972148s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000495s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3581.2196742
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:44:56.891343
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0006789999997636187s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:44:56.891343s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:44:56.891682s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000339s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1063.3046918
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:45:15.973539
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.000981099999989965s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:45:15.974536s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:45:15.974030s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000506s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3601.2208993
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:45:16.892612
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008059000001594541s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:45:16.892612s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:45:16.893015s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000403s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1083.3072835
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:45:35.976148
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008550999998533371s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:45:35.976148s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:45:35.976576s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000428s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3621.2225596
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:45:36.894122
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.000843900000290887s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:45:36.895060s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:45:36.894544s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000516s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1103.3088019
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:45:55.977682
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007950000001528679s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:45:55.977682s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:45:55.978080s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000398s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3641.2245665
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:45:56.896204
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008142000001498673s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:45:56.896204s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:45:56.896611s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000407s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1123.3104227
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:46:15.979254
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012223000001085893s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:46:15.980280s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:46:15.979865s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000415s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3661.226844
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:46:16.898455
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009329000004072441s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:46:16.899331s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:46:16.898921s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.00041s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1143.3124344
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:46:35.981173
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0014615000000048894s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:46:35.982176s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:46:35.981904s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000272s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3681.2287468
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:46:36.900456
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007549000001745299s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:46:36.900456s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:46:36.900833s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000377s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1163.3160783
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:46:55.984967
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0013390999999955966s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:46:55.985969s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:46:55.985637s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000332s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3701.2301576
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:46:56.901746
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007564000002275861s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:46:56.901746s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:46:56.902124s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000378s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1183.3187643
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:47:15.987653
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007886999999300315s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:47:15.987653s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:47:15.988047s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000394s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3721.2314958
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:47:16.903211
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0005552999996325525s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:47:16.903211s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:47:16.903489s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000278s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1203.321163
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:47:35.990083
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0011762999999973545s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:47:35.991038s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:47:35.990671s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000367s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3741.2324527
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:47:36.904035
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0008804999997664709s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:47:36.904908s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:47:36.904475s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000433s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1223.3234697
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:47:55.992352
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0009081999999125401s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:47:55.993273s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:47:55.992806s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000467s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3761.2340535
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:47:56.905744
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007861000003686058s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:47:56.905744s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:47:56.906137s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000393s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1243.3256126
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:48:15.994484
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0007032999999410094s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:48:15.994484s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:48:15.994836s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000352s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3781.2356307
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:48:16.907210
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.000918799999908515s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:48:16.908136s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:48:16.907669s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000467s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 1263.3270548
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:48:35.995902
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0012076999998953397s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:48:35.996901s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:48:35.996506s
+DEBUG:root:[CLIENT CLOCK] Synchronization error 0.000395s
+DEBUG:root:[CLOCK SERVER] Requested time from server at 3801.2378831
+DEBUG:root:[CLOCK SERVER] Time received from clock server 2020-10-18 15:48:36.909571
+DEBUG:root:[CLIENT CLOCK] Delay in response from clock server is 0.0004970999998477055s
+DEBUG:root:[CLIENT CLOCK] Time before synchronization 2020-10-18 15:48:36.909571s
+DEBUG:root:[CLIENT CLOCK] Time after synchronization 2020-10-18 15:48:36.909820s
+DEBUG:root:[CLIENT CLOCK] Synchronization error -0.000249s
