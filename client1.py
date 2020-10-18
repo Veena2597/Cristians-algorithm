@@ -7,6 +7,7 @@ import threading
 import logging
 import sys
 import pickle
+
 HEADER = 64
 PORT = 5051  # Figure out more about port configurations
 # SERVER = "169.231.16.166"
@@ -17,9 +18,9 @@ DISCONNECT_MESSAGE = "DISCONNECTED"
 CLOCK_REQUEST = "SYNCHRONIZE"
 CLIENTS_LIST = {'CLIENT1': 5051, 'CLIENT2': 5052, 'CLIENT3': 5053}
 
-logging.basicConfig(filename='client1.log',level=logging.DEBUG)
-clock_server_time  =0
-client_time_at_sync =0
+logging.basicConfig(filename='client1.log', level=logging.DEBUG)
+clock_server_time = 0
+client_time_at_sync = 0
 bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 clock_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -39,13 +40,21 @@ class Blockchain:
     def _init_(self):
         self.head = None
 
+    def push(self, timestamp, amount, sender, receiver):
+        node = Node(timestamp, amount, sender, receiver)
+        node.next = self.head
+        self.head = node
+
+    def traverse(self):
+        pass
+
 
 def clientClock():
     global clock_server_time
     global client_time_at_sync
 
     current_sys_time = datetime.datetime.now()
-    current_sim_time = client_time_at_sync + (current_sys_time - clock_server_time)*1.5
+    current_sim_time = client_time_at_sync + (current_sys_time - clock_server_time) * 1.5
     return current_sim_time
 
 
@@ -72,7 +81,8 @@ def synchronizeTime():
         # Times before and after synchronization are printed
         logging.debug("[CLIENT CLOCK] Time before synchronization {}s".format(str(actual_time)))
 
-        client_time_at_sync= clock_server_time + datetime.timedelta(seconds=(delay) / 2)  # Calculated with Cristian's algorithm
+        client_time_at_sync = clock_server_time + datetime.timedelta(
+            seconds=(delay) / 2)  # Calculated with Cristian's algorithm
         logging.debug("[CLIENT CLOCK] Time after synchronization {}s".format(str(client_time_at_sync)))
 
         error = actual_time - client_time_at_sync
@@ -80,7 +90,7 @@ def synchronizeTime():
 
         # The client ping the clock again after 20s
         time.sleep(20)
-        #return client_time_at_sync
+        # return client_time_at_sync
 
 
 def listenTransaction(connection):
@@ -102,7 +112,7 @@ def inputTransactions():
         print(s)
         if s[0] == 't':
             timesta = clientClock()
-            tran = {'sender': s[1], 'receiver':s[2],'amount':s[3],'timestamp':timesta}
+            tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timesta}
             b = pickle.dumps(tran)
             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -116,6 +126,8 @@ def inputTransactions():
 
 
 if __name__ == '__main__':
+    global block
+    block = Blockchain()
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
     clock_socket.connect((SERVER, 5050))
@@ -134,7 +146,6 @@ if __name__ == '__main__':
         connection, address = bind_socket.accept()
         logging.debug("[CLIENT CONNECTED] {}".format(str(connection)))
         print(connection)
-
 
         listen_transactions = threading.Thread(target=listenTransaction, args=connection)
         listen_transactions.start()

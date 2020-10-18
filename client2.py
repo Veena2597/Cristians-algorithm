@@ -40,6 +40,14 @@ class Blockchain:
     def _init_(self):
         self.head = None
 
+    def push(self, timestamp, amount, sender, receiver):
+        node = Node(timestamp, amount, sender, receiver)
+        node.next = self.head
+        self.head = node
+
+    def traverse(self):
+        pass
+
 
 def clientClock():
     global clock_server_time
