@@ -34,17 +34,11 @@ if __name__ == '__main__':
     # The clock server keeps listening for different clients
     clock.listen()
     print("f[CLOCK SERVER] Clock server is listening")
-    clients_list = []
+
     while True:
         # Clock server accepts new clients and creates a new thread for each client
         connection, address = clock.accept()
         print(connection)
-        '''if connection:
-            clients_list.append(connection)
-        for i in clients_list:
-            temp = str(clients_list)
-            i.send(str.encode(FORMAT))
-        print(sys.getsizeof(clients_list))'''
         print(f"[CLOCK SERVER]  New client connected with address: {address}")
         thread = threading.Thread(target=sendTime, args=(connection, address))
         thread.start()

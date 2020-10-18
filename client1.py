@@ -21,8 +21,9 @@ logging.basicConfig(filename='client1.log',level=logging.DEBUG)
 
 bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+clock_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+clock_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
 
 class Node:
     def __init__(self, timestamp, amount, sender, receiver):
@@ -49,11 +50,11 @@ def clientClock(clock_server_time, delay):
 def synchronizeTime():
     # Client sends CLOCK_REQUEST to the clock server and the request time is recorded
     request_time = default_timer()
-    connect_socket.send(CLOCK_REQUEST.encode(FORMAT))
+    clock_socket.send(CLOCK_REQUEST.encode(FORMAT))
     logging.debug("[CLOCK SERVER] Requested time from server at {}".format(request_time))
 
     # Client receives time from the clock server and the response time is recorded
-    clock_server_time = parser.parse(connect_socket.recv(1024).decode(FORMAT))
+    clock_server_time = parser.parse(clock_socket.recv(1024).decode(FORMAT))
     response_time = default_timer()
     actual_time = datetime.datetime.now()
     logging.debug("[CLOCK SERVER] Time received from clock server {}".format(str(clock_server_time)))
@@ -83,11 +84,13 @@ def listenTransactions():
 if __name__ == '__main__':
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
-
+    clock_socket.connect_ex((SERVER, 5050))
+    for i in range(1, 4):
+        if i != 1:
+            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            connect_socket.connect_ex((SERVER, 5050 + i))
     while True:
-        connect_socket.connect_ex((SERVER, 5053))
-        connect_socket.connect_ex((SERVER, 5052))
-        connect_socket.connect_ex((SERVER, 5050))
         connection, address = bind_socket.accept()
         print(connection)
         clock_thread = threading.Thread(target=synchronizeTime)
