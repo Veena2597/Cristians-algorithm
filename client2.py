@@ -5,13 +5,15 @@ from dateutil import parser
 from timeit import default_timer
 import threading
 import logging
+import pickle
 import sys
-
+client_time =0
 HEADER = 64
 PORT = 5052  # Figure out more about port configurations
 # SERVER = "169.231.16.166"
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDRESS = (SERVER, PORT)
+address1 =(SERVER,5051)
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = "DISCONNECTED"
 CLOCK_REQUEST = "SYNCHRONIZE"
@@ -23,7 +25,7 @@ bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 clock_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clock_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-
+buffer =[]
 
 class Node:
     def __init__(self, timestamp, amount, sender, receiver):
@@ -32,6 +34,7 @@ class Node:
         self.receiver = receiver
         self.timestamp = timestamp
         self.next = None
+
 
 
 class Blockchain:
@@ -56,6 +59,7 @@ def synchronizeTime():
 
         # Client receives time from the clock server and the response time is recorded
         clock_server_time = parser.parse(clock_socket.recv(1024).decode(FORMAT))
+
         response_time = default_timer()
         actual_time = datetime.datetime.now()
         logging.debug("[CLOCK SERVER] Time received from clock server {}".format(str(clock_server_time)))
@@ -88,24 +92,37 @@ def broadcastTransaction():
 def inputTransactions():
     while True:
         raw_type = input("Please enter your transaction type:")
+        s = raw_type.split(' ')
         if raw_type == 't':
-            raw_data = input("Enter transaction")
-            if raw_data:
-                pass  # update blockchain and traverse it till the current node. Check amount and validity of transaction
-        elif raw_type == 'b':
-            pass
+            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            connect_socket.connect_ex((SERVER, 5051))
+            connect_socket.send(bytes(str(client_time), 'utf-8'))
+                # update blockchain and traverse it till the current node. Check amount and validity of transaction
+        elif s[0] == 'b':
+            global buffer
+            temp = block.head
+            for x in buffer:
+               temp = x
+               temp = temp.next
+
+
+
 
 
 if __name__ == '__main__':
+    block =Blockchain()
+
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
     clock_socket.connect((SERVER, 5050))
-    for i in range(1, 4):
-        if i != 2:
-            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            connect_socket.connect_ex((SERVER, 5050 + i))
-            print(5050 + i)
+
+    # for i in range(1, 4):
+    #     if i != 2:
+    #         connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    #         connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    #         connect_socket.connect_ex((SERVER, 5050 + i))
+    #         print(5050 + i)
 
     clock_thread = threading.Thread(target=synchronizeTime)
     clock_thread.start()
@@ -114,10 +131,13 @@ if __name__ == '__main__':
     while True:
         connection, address = bind_socket.accept()
         logging.debug("[CLIENT CONNECTED] {}".format(str(connection)))
-        '''
-        listen_transactions = threading.Thread(target=listenTransaction, args=connection)
-        listen_transactions.start()
-        broadcast_transaction = threading.Thread(target=broadcastTransaction, args=connection)
-        broadcast_transaction.start()'''
+        print(connection)
+        msg = pickle.loads(connection.recv(1024))
+        print(msg)
+        # tran = {'sender': s[1], 'receiver':s[2],'amount':s[3],'timestamp':client_time}
+        buffer.append(Node(msg['sender'],msg['receiver'],msg['amount'],msg['timestamp']))
+        print(buffer)
+
+
     clock_socket.close()
     bind_socket.close()

@@ -16,6 +16,7 @@ def sendTime(connection, address):
     while connected:
         # Client sends CLOCK_REQUEST whenever it needs to know the time from the server
         msg = connection.recv(1024).decode(FORMAT)
+        print(msg)
         if msg == CLOCK_REQUEST:
             connection.send(str(datetime.datetime.now()).encode(FORMAT))
     connection.close()
