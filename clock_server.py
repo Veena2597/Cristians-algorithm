@@ -18,7 +18,6 @@ def sendTime(connection, address):
         msg = connection.recv(1024).decode(FORMAT)
         if msg == CLOCK_REQUEST:
             connection.send(str(datetime.datetime.now()).encode(FORMAT))
-
     connection.close()
 
 

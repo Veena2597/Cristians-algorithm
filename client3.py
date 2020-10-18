@@ -49,47 +49,75 @@ def clientClock(clock_server_time, delay):
 
 def synchronizeTime():
     # Client sends CLOCK_REQUEST to the clock server and the request time is recorded
-    request_time = default_timer()
-    clock_socket.send(CLOCK_REQUEST.encode(FORMAT))
-    logging.debug("[CLOCK SERVER] Requested time from server at {}".format(request_time))
+    while True:
+        request_time = default_timer()
+        clock_socket.send(CLOCK_REQUEST.encode(FORMAT))
+        logging.debug("[CLOCK SERVER] Requested time from server at {}".format(request_time))
 
-    # Client receives time from the clock server and the response time is recorded
-    clock_server_time = parser.parse(clock_socket.recv(1024).decode(FORMAT))
-    response_time = default_timer()
-    actual_time = datetime.datetime.now()
-    logging.debug("[CLOCK SERVER] Time received from clock server {}".format(str(clock_server_time)))
+        # Client receives time from the clock server and the response time is recorded
+        clock_server_time = parser.parse(clock_socket.recv(1024).decode(FORMAT))
+        response_time = default_timer()
+        actual_time = datetime.datetime.now()
+        logging.debug("[CLOCK SERVER] Time received from clock server {}".format(str(clock_server_time)))
 
-    # Delay between request sent and response received is calculated
-    delay = response_time - request_time
-    logging.debug("[CLIENT CLOCK] Delay in response from clock server is {}s".format(str(delay)))
+        # Delay between request sent and response received is calculated
+        delay = response_time - request_time
+        logging.debug("[CLIENT CLOCK] Delay in response from clock server is {}s".format(str(delay)))
 
-    # Times before and after synchronization are printed
-    logging.debug("[CLIENT CLOCK] Time before synchronization {}s".format(str(actual_time)))
-    client_time = clock_server_time + datetime.timedelta(seconds=(delay) / 2)  # Calculated with Cristian's algorithm
-    logging.debug("[CLIENT CLOCK] Time after synchronization {}s".format(str(client_time)))
+        # Times before and after synchronization are printed
+        logging.debug("[CLIENT CLOCK] Time before synchronization {}s".format(str(actual_time)))
+        client_time = clock_server_time + datetime.timedelta(seconds=(delay) / 2)  # Calculated with Cristian's algorithm
+        logging.debug("[CLIENT CLOCK] Time after synchronization {}s".format(str(client_time)))
 
-    error = actual_time - client_time
-    logging.debug("[CLIENT CLOCK] Synchronization error {}s".format(str(error.total_seconds())))
+        error = actual_time - client_time
+        logging.debug("[CLIENT CLOCK] Synchronization error {}s".format(str(error.total_seconds())))
 
-    # The client ping the clock again after 20s
-    time.sleep(10)
+        # The client ping the clock again after 20s
+        time.sleep(20)
+
+
+def listenTransaction():
+    # connection.recv, update the local buffer
+    pass
+
+
+def broadcastTransaction():
+    pass
+
+
+def inputTransactions():
+    while True:
+        raw_type = input("Please enter your transaction type:")
+        if raw_type == 't':
+            raw_data = input("Enter transaction")
+            if raw_data:
+                pass  # update blockchain and traverse it till the current node. Check amount and validity of transaction
+        elif raw_type == 'b':
+            pass
 
 
 if __name__ == '__main__':
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
-    clock_socket.connect_ex((SERVER, 5050))
+    clock_socket.connect((SERVER, 5050))
     for i in range(1, 4):
         if i != 3:
             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             connect_socket.connect_ex((SERVER, 5050 + i))
+            print(5050 + i)
+
+    clock_thread = threading.Thread(target=synchronizeTime)
+    clock_thread.start()
+    my_transactions = threading.Thread(target=inputTransactions)
+    my_transactions.start()
     while True:
         connection, address = bind_socket.accept()
-        print(connection)
-        clock_thread = threading.Thread(target=synchronizeTime)
-        clock_thread.start()
-        #clients_thread = threading.Thread(target=updateClients)
-        #clients_thread.start()
-
-    client.close()
+        logging.debug("[CLIENT CONNECTED] {}".format(str(connection)))
+        '''
+        listen_transactions = threading.Thread(target=listenTransaction, args=connection)
+        listen_transactions.start()
+        broadcast_transaction = threading.Thread(target=broadcastTransaction, args=connection)
+        broadcast_transaction.start()'''
+    clock_socket.close()
+    bind_socket.close()
