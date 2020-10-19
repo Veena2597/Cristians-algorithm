@@ -7,8 +7,6 @@ import threading
 import logging
 import sys
 import pickle
-import datetime
-
 
 HEADER = 64
 PORT = 5051  # Figure out more about port configurations
@@ -23,6 +21,7 @@ CLIENTS_LIST = {'CLIENT1': 5051, 'CLIENT2': 5052, 'CLIENT3': 5053}
 logging.basicConfig(filename='client1.log', level=logging.DEBUG)
 clock_server_time = 0
 client_time_at_sync = 0
+client_sockets = []
 bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 clock_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -36,15 +35,14 @@ class Node:
         self.receiver = receiver
         self.timestamp = timestamp
         self.next = None
-    def __lt__(self, other):
-       # min heap based on job.end
-       return self.timestamp < other.timestamp
+
 
 class Blockchain:
     def _init_(self):
         self.head = None
 
-    def push(self, node):
+    def push(self, timestamp, amount, sender, receiver):
+        node = Node(timestamp, amount, sender, receiver)
         if self.head is None:
             self.head = node
             return
@@ -115,17 +113,19 @@ def synchronizeTime():
 
 def listenTransaction(connection):
     # connection.recv, update the local buffer
-    msg = connection.recv(1024).decode(FORMAT)
-    print(msg)
-    pass
+    while True:
+        msg = connection.recv(1024).decode(FORMAT)
+        print(msg)
+    connect_socket.close()
 
 
 def broadcastTransaction():
     pass
 
 
-def inputTransactions(client_socks):
+def inputTransactions():
     global client_time_at_sync
+    global client_sockets
     global buffer
 
     while True:
@@ -135,12 +135,12 @@ def inputTransactions(client_socks):
 
         if s[0] == 't':
             timestamp = clientClock()
-            pri
+            print(timestamp)
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
             buffer.append(b)
 
-            for sock in range(len(client_socks)):
+            for sock in range(len(client_sockets)):
                 sock.send(bytes(b))
 
             connect_socket.send(bytes(b))
@@ -165,7 +165,7 @@ if __name__ == '__main__':
 
     clock_thread = threading.Thread(target=synchronizeTime)
     clock_thread.start()
-    my_transactions = threading.Thread(target=inputTransactions, args=client_sockets)
+    my_transactions = threading.Thread(target=inputTransactions)
     my_transactions.start()
 
     while True:
@@ -173,8 +173,8 @@ if __name__ == '__main__':
         logging.debug("[CLIENT CONNECTED] {}".format(str(connection)))
         print(connection)
 
-        listen_transactions = threading.Thread(target=listenTransaction, args=connection)
-        listen_transactions.start()
+        #listen_transactions = threading.Thread(target=listenTransaction, args=connection)
+        #listen_transactions.start()
         #
         # broadcast_transaction = threading.Thread(target=broadcastTransaction, args=connection)
         # broadcast_transaction.start()
