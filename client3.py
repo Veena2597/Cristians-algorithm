@@ -22,6 +22,7 @@ CLIENTS_LIST = {'CLIENT1': 5051, 'CLIENT2': 5052, 'CLIENT3': 5053}
 logging.basicConfig(filename='client1.log', level=logging.DEBUG)
 clock_server_time = 0
 client_time_at_sync = 0
+client_sockets = []
 bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 clock_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
