@@ -7,9 +7,6 @@ import threading
 import logging
 import sys
 import pickle
-from queue import PriorityQueue
-from heapq import *
-
 
 HEADER = 64
 PORT = 5051  # Figure out more about port configurations
@@ -37,9 +34,6 @@ class Node:
         self.receiver = receiver
         self.timestamp = timestamp
         self.next = None
-    def __lt__(self, other):
-        # min heap based on job.end
-        return self.timestamp < other.timestamp
 
 
 class Blockchain:
@@ -48,13 +42,28 @@ class Blockchain:
 
     def push(self, timestamp, amount, sender, receiver):
         node = Node(timestamp, amount, sender, receiver)
-        node.next = self.head
-        self.head = node
+        if self.head is None:
+            self.head = node
+            return
+
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = node
 
     def traverse(self):
-        pass
-
-
+        temp = self.head
+        balance = 10
+        validity = 1
+        while temp:
+            if temp.sender == 'B':
+                balance = balance - temp.amount
+            elif temp.receiver == 'B':
+                balance = balance + temp.amount
+            temp = temp.next
+        if balance < 0:
+            validity = 0
+        return validity, balance
 
 
 def clientClock():
@@ -102,8 +111,12 @@ def synchronizeTime():
 
 
 def listenTransaction(connection):
+    global buffer
+
     # connection.recv, update the local buffer
     msg = connection.recv(1024).decode(FORMAT)
+    trans = pickle.loads(msg)
+    buffer.append(trans)
     print(msg)
     pass
 
@@ -112,44 +125,47 @@ def broadcastTransaction():
     pass
 
 
-def inputTransactions():
+def inputTransactions(client_socks):
     global client_time_at_sync
     global buffer
+
     while True:
-        raw_type = input("Please enter your transaction type:")
+        raw_type = input("Please enter your transaction:")
         s = raw_type.split(' ')
         print(s)
+
         if s[0] == 't':
-            timesta = clientClock()
-            tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timesta}
-
+            timestamp = clientClock()
+            tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
-            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            buffer.append(b)
 
-            connect_socket.connect_ex((SERVER, 5051))
-            print(client_time_at_sync)
+            for sock in range(len(client_socks)):
+                sock.send(bytes(b))
+
             connect_socket.send(bytes(b))
-
+            print(client_time_at_sync)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
-        elif raw_type == 'b':
+        elif s[0] == 'b':
             pass
 
 
 if __name__ == '__main__':
-    buffer = []
+    block = Blockchain()
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
     clock_socket.connect((SERVER, 5050))
-    # for i in range(1, 4):
-    #     if i != 1:
-    #         connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    #         connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    #         connect_socket.connect_ex((SERVER, 5050 + i))
+    client_sockets = []
+    for i in range(1, 4):
+        if i != 2:
+            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            connect_socket.connect_ex((SERVER, 5050 + i))
+            client_sockets.append(connect_socket)
 
     clock_thread = threading.Thread(target=synchronizeTime)
     clock_thread.start()
-    my_transactions = threading.Thread(target=inputTransactions)
+    my_transactions = threading.Thread(target=inputTransactions, args=client_sockets)
     my_transactions.start()
 
     while True:
