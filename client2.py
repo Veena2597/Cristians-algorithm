@@ -9,7 +9,7 @@ import sys
 import pickle
 
 HEADER = 64
-PORT = 5051  # Figure out more about port configurations
+PORT = 5052  # Figure out more about port configurations
 # SERVER = "169.231.16.166"
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDRESS = (SERVER, PORT)

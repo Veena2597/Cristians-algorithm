@@ -7,6 +7,8 @@ import threading
 import logging
 import sys
 import pickle
+import datetime
+
 
 HEADER = 64
 PORT = 5051  # Figure out more about port configurations
@@ -34,14 +36,15 @@ class Node:
         self.receiver = receiver
         self.timestamp = timestamp
         self.next = None
-
+    def __lt__(self, other):
+       # min heap based on job.end
+       return self.timestamp < other.timestamp
 
 class Blockchain:
     def _init_(self):
         self.head = None
 
-    def push(self, timestamp, amount, sender, receiver):
-        node = Node(timestamp, amount, sender, receiver)
+    def push(self, node):
         if self.head is None:
             self.head = node
             return
@@ -132,6 +135,7 @@ def inputTransactions(client_socks):
 
         if s[0] == 't':
             timestamp = clientClock()
+            pri
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
             buffer.append(b)
