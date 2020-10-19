@@ -7,6 +7,9 @@ import threading
 import logging
 import sys
 import pickle
+from queue import PriorityQueue
+from heapq import *
+
 
 HEADER = 64
 PORT = 5051  # Figure out more about port configurations
@@ -34,6 +37,9 @@ class Node:
         self.receiver = receiver
         self.timestamp = timestamp
         self.next = None
+    def __lt__(self, other):
+        # min heap based on job.end
+        return self.timestamp < other.timestamp
 
 
 class Blockchain:
@@ -47,6 +53,8 @@ class Blockchain:
 
     def traverse(self):
         pass
+
+
 
 
 def clientClock():
@@ -106,6 +114,7 @@ def broadcastTransaction():
 
 def inputTransactions():
     global client_time_at_sync
+    global buffer
     while True:
         raw_type = input("Please enter your transaction type:")
         s = raw_type.split(' ')
@@ -113,13 +122,14 @@ def inputTransactions():
         if s[0] == 't':
             timesta = clientClock()
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timesta}
+
             b = pickle.dumps(tran)
             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
             connect_socket.connect_ex((SERVER, 5051))
             print(client_time_at_sync)
             connect_socket.send(bytes(b))
-
 
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
         elif raw_type == 'b':
@@ -127,6 +137,7 @@ def inputTransactions():
 
 
 if __name__ == '__main__':
+    buffer = []
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
     clock_socket.connect((SERVER, 5050))
