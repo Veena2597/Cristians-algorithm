@@ -26,23 +26,27 @@ bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 clock_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clock_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-
+buffer =[]
+block =[]
 
 class Node:
     def __init__(self, timestamp, amount, sender, receiver):
-        self.amount = amount
+        self.amount = int(amount)
         self.sender = sender
         self.receiver = receiver
         self.timestamp = timestamp
         self.next = None
 
+    def __lt__(self, other):
+        # min heap based on job.end
+        return self.timestamp < other.timestamp
 
 class Blockchain:
-    def _init_(self):
+    def __init__(self):
         self.head = None
 
-    def push(self, timestamp, amount, sender, receiver):
-        node = Node(timestamp, amount, sender, receiver)
+    def push(self, node):
+
         if self.head is None:
             self.head = node
             return
@@ -57,9 +61,9 @@ class Blockchain:
         balance = 10
         validity = 1
         while temp:
-            if temp.sender == 'B':
+            if temp.sender == 'A':
                 balance = balance - temp.amount
-            elif temp.receiver == 'B':
+            elif temp.receiver == 'A':
                 balance = balance + temp.amount
             temp = temp.next
         if balance < 0:
@@ -70,6 +74,7 @@ class Blockchain:
 def clientClock():
     global clock_server_time
     global client_time_at_sync
+
 
     current_sys_time = datetime.datetime.now().timestamp()
     current_sim_time = client_time_at_sync.timestamp() + (current_sys_time - clock_server_time.timestamp()) * 1.5
@@ -111,14 +116,16 @@ def synchronizeTime():
         # return client_time_at_sync
 
 
-def listenTransaction(connection):
-    # connection.recv, update the local buffer
-    while True:
-        msg = connection.recv(1024)
-        print(msg)
 
-    connection.close()
-
+def listenTransaction(connection,address):
+    # connection.recv, update the local
+    global buffer
+    msg = connection.recv(1024)
+    print(msg)
+    x = pickle.loads(msg)
+    print(x)
+    heappush(buffer, Node(x['timestamp'],x['amount'],x['sender'],x['receiver']))
+    print(buffer)
 
 def broadcastTransaction():
     pass
@@ -129,22 +136,24 @@ def inputTransactions():
     global client_sockets
     global buffer
 
+    block = Blockchain()
+    print(block.head)
     while True:
         raw_type = input("Please enter your transaction:")
         s = raw_type.split(' ')
         print(s)
 
-        if s[0] == 't':
+        if s[0] == 'T':
             timestamp = clientClock()
             print(timestamp)
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
-            #buffer.append(b)
+            buffer.append(b)
 
             for sock in range(len(client_sockets)):
-                client_sockets[sock].send(bytes(b))
+                sock.send(bytes(b))
 
-            #connect_socket.send(bytes(b))
+            connect_socket.send(bytes(b))
             print(client_time_at_sync)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
         elif s[0] == 'b':
@@ -152,20 +161,18 @@ def inputTransactions():
 
 
 if __name__ == '__main__':
-    block = Blockchain()
+
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
-    clock_socket.connect_ex((SERVER, 5050))
+    clock_socket.connect((SERVER, 5050))
     client_sockets = []
-
-    for i in range(1, 3):
+    for i in range(1, 4):
         if i != 1:
             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             connect_socket.connect_ex((SERVER, 5050 + i))
             client_sockets.append(connect_socket)
 
-    print(client_sockets)
     clock_thread = threading.Thread(target=synchronizeTime)
     clock_thread.start()
     my_transactions = threading.Thread(target=inputTransactions)
@@ -176,8 +183,9 @@ if __name__ == '__main__':
         logging.debug("[CLIENT CONNECTED] {}".format(str(connection)))
         print(connection)
 
-        #listen_transactions = threading.Thread(target=listenTransaction, args=connection)
-        #listen_transactions.start()
+
+        listen_transactions = threading.Thread(target=listenTransaction, args=(connection,address))
+        listen_transactions.start()
         #
         # broadcast_transaction = threading.Thread(target=broadcastTransaction, args=connection)
         # broadcast_transaction.start()
