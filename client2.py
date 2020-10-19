@@ -19,8 +19,8 @@ CLOCK_REQUEST = "SYNCHRONIZE"
 CLIENTS_LIST = {'CLIENT1': 5051, 'CLIENT2': 5052, 'CLIENT3': 5053}
 
 logging.basicConfig(filename='client1.log', level=logging.DEBUG)
-clock_server_time = 0
-client_time_at_sync = 0
+clock_server_time = datetime.datetime.now()
+client_time_at_sync = datetime.datetime.now()
 client_sockets = []
 bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -38,7 +38,7 @@ class Node:
 
 
 class Blockchain:
-    def _init_(self):
+    def __init__(self):
         self.head = None
 
     def push(self, timestamp, amount, sender, receiver):
@@ -71,8 +71,8 @@ def clientClock():
     global clock_server_time
     global client_time_at_sync
 
-    current_sys_time = datetime.datetime.now()
-    current_sim_time = client_time_at_sync + (current_sys_time - clock_server_time) * 1.5
+    current_sys_time = datetime.datetime.now().timestamp()
+    current_sim_time = client_time_at_sync.timestamp() + (current_sys_time - clock_server_time.timestamp()) * 1.5
     return current_sim_time
 
 
@@ -111,14 +111,14 @@ def synchronizeTime():
         # return client_time_at_sync
 
 
-def listenTransaction(connection):
-    #global buffer
+def listenTransaction(connection, address):
+    # global buffer
 
     # connection.recv, update the local buffer
     while True:
-        msg = connection.recv(1024).decode(FORMAT)
-        #trans = pickle.loads(msg)
-        #buffer.append(trans)
+        msg = connection.recv(1024)
+        trans = pickle.loads(msg)
+        # buffer.append(trans)
         print(msg)
     connection.close()
 
@@ -141,12 +141,13 @@ def inputTransactions():
             timestamp = clientClock()
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
-            buffer.append(b)
+            # buffer.append(b)
 
             for sock in range(len(client_sockets)):
-                sock.send(bytes(b))
+                client_sockets[sock].send(bytes(b))
 
-            connect_socket.send(bytes(b))
+
+            # connect_socket.send(bytes(b))
             print(client_time_at_sync)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
         elif s[0] == 'b':
@@ -157,9 +158,10 @@ if __name__ == '__main__':
     block = Blockchain()
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
-    clock_socket.connect((SERVER, 5050))
+    clock_socket.connect_ex((SERVER, 5050))
+    client_sockets = []
 
-    for i in range(1, 4):
+    for i in range(1, 3):
         if i != 2:
             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -176,8 +178,8 @@ if __name__ == '__main__':
         logging.debug("[CLIENT CONNECTED] {}".format(str(connection)))
         print(connection)
 
-        #listen_transactions = threading.Thread(target=listenTransaction, args=connection)
-        #listen_transactions.start()
+        listen_transactions = threading.Thread(target=listenTransaction, args=(connection, address))
+        listen_transactions.start()
         #
         # broadcast_transaction = threading.Thread(target=broadcastTransaction, args=connection)
         # broadcast_transaction.start()
