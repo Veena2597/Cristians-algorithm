@@ -7,6 +7,8 @@ import threading
 import logging
 import sys
 import pickle
+from heapq import *
+
 
 HEADER = 64
 PORT = 5052  # Figure out more about port configurations
@@ -19,30 +21,34 @@ CLOCK_REQUEST = "SYNCHRONIZE"
 CLIENTS_LIST = {'CLIENT1': 5051, 'CLIENT2': 5052, 'CLIENT3': 5053}
 
 logging.basicConfig(filename='client1.log', level=logging.DEBUG)
-clock_server_time = 0
-client_time_at_sync = 0
+clock_server_time = datetime.datetime.now()
+client_time_at_sync = datetime.datetime.now()
 client_sockets = []
 bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 clock_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clock_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-
+buffer =[]
+block =[]
 
 class Node:
     def __init__(self, timestamp, amount, sender, receiver):
-        self.amount = amount
+        self.amount = int(amount)
         self.sender = sender
         self.receiver = receiver
         self.timestamp = timestamp
         self.next = None
 
+    def __lt__(self, other):
+        # min heap based on job.end
+        return self.timestamp < other.timestamp
 
 class Blockchain:
-    def _init_(self):
+    def __init__(self):
         self.head = None
 
-    def push(self, timestamp, amount, sender, receiver):
-        node = Node(timestamp, amount, sender, receiver)
+    def push(self, node):
+
         if self.head is None:
             self.head = node
             return
@@ -61,6 +67,7 @@ class Blockchain:
                 balance = balance - temp.amount
             elif temp.receiver == 'B':
                 balance = balance + temp.amount
+
             temp = temp.next
         if balance < 0:
             validity = 0
@@ -71,8 +78,9 @@ def clientClock():
     global clock_server_time
     global client_time_at_sync
 
-    current_sys_time = datetime.datetime.now()
-    current_sim_time = client_time_at_sync + (current_sys_time - clock_server_time) * 1.5
+
+    current_sys_time = datetime.datetime.now().timestamp()
+    current_sim_time = client_time_at_sync.timestamp() + (current_sys_time - clock_server_time.timestamp()) * 1.5
     return current_sim_time
 
 
@@ -111,17 +119,16 @@ def synchronizeTime():
         # return client_time_at_sync
 
 
-def listenTransaction(connection):
-    #global buffer
 
-    # connection.recv, update the local buffer
-    while True:
-        msg = connection.recv(1024).decode(FORMAT)
-        #trans = pickle.loads(msg)
-        #buffer.append(trans)
-        print(msg)
-    connection.close()
-
+def listenTransaction(connection,address):
+    # connection.recv, update the local
+    global buffer
+    msg = connection.recv(1024)
+    print(msg)
+    x = pickle.loads(msg)
+    print(x)
+    heappush(buffer, Node(x['timestamp'],x['amount'],x['sender'],x['receiver']))
+    print(buffer)
 
 def broadcastTransaction():
     pass
@@ -132,21 +139,36 @@ def inputTransactions():
     global client_sockets
     global buffer
 
+    block = Blockchain()
+    print(block.head)
     while True:
         raw_type = input("Please enter your transaction:")
         s = raw_type.split(' ')
         print(s)
 
-        if s[0] == 't':
+        if s[0] == 'T':
             timestamp = clientClock()
+            print(timestamp)
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
-            buffer.append(b)
 
-            for sock in range(len(client_sockets)):
-                sock.send(bytes(b))
 
+
+            heappush(buffer,Node(timestamp,s[3],s[1],s[2]))
+            print(buffer)
+            # for sock in (client_sockets):
+            #     sock.send(bytes(b))
+            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            connect_socket.connect_ex((SERVER, 5051))
             connect_socket.send(bytes(b))
+            time.sleep(2)
+            while (len(buffer) > 0 ):
+                y = heappop(buffer)
+                block.push(y)
+
+            validity, balance = block.traverse()
+            print(validity,balance)
             print(client_time_at_sync)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
         elif s[0] == 'b':
@@ -154,17 +176,17 @@ def inputTransactions():
 
 
 if __name__ == '__main__':
-    block = Blockchain()
+
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
     clock_socket.connect((SERVER, 5050))
-
-    for i in range(1, 4):
-        if i != 2:
-            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            connect_socket.connect_ex((SERVER, 5050 + i))
-            client_sockets.append(connect_socket)
+    client_sockets = []
+    # for i in range(1, 3):
+    #     if i != 1:
+    #         connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    #         connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    #         connect_socket.connect_ex((SERVER, 5050 + i))
+    #         client_sockets.append(connect_socket)
 
     clock_thread = threading.Thread(target=synchronizeTime)
     clock_thread.start()
@@ -176,8 +198,9 @@ if __name__ == '__main__':
         logging.debug("[CLIENT CONNECTED] {}".format(str(connection)))
         print(connection)
 
-        #listen_transactions = threading.Thread(target=listenTransaction, args=connection)
-        #listen_transactions.start()
+
+        listen_transactions = threading.Thread(target=listenTransaction, args=(connection,address))
+        listen_transactions.start()
         #
         # broadcast_transaction = threading.Thread(target=broadcastTransaction, args=connection)
         # broadcast_transaction.start()
