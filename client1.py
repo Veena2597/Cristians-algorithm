@@ -76,8 +76,6 @@ class Blockchain:
 def clientClock():
     global clock_server_time
     global client_time_at_sync
-
-
     current_sys_time = datetime.datetime.now().timestamp()
     current_sim_time = client_time_at_sync.timestamp() + (current_sys_time - clock_server_time.timestamp()) * 1.5
     return current_sim_time
@@ -155,8 +153,6 @@ def inputTransactions():
 
             heappush(buffer,Node(timestamp,s[3],s[1],s[2]))
             print(buffer)
-            # for sock in (client_sockets):
-            #     sock.send(bytes(b))
             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             connect_socket.connect_ex((SERVER, 5052))
