@@ -8,7 +8,6 @@ import logging
 import sys
 import pickle
 from heapq import *
-import random
 
 HEADER = 64
 PORT = 5052  # Figure out more about port configurations
@@ -24,12 +23,12 @@ logging.basicConfig(filename='client1.log', level=logging.DEBUG)
 clock_server_time = datetime.datetime.now()
 client_time_at_sync = datetime.datetime.now()
 client_sockets = []
-buffer = []
-
 bind_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 bind_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 clock_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 clock_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+buffer = []
+block = []
 
 
 class Node:
@@ -69,9 +68,10 @@ class Blockchain:
                 balance = balance - temp.amount
             elif temp.receiver == 'B':
                 balance = balance + temp.amount
-
             temp = temp.next
-        return balance
+        if balance < 0:
+            validity = 0
+        return validity, balance
 
 
 def clientClock():
@@ -121,9 +121,15 @@ def listenTransaction(connection, address):
     # connection.recv, update the local
     global buffer
     msg = connection.recv(1024)
+    print(msg)
     x = pickle.loads(msg)
-    logging.debug("[CLIENT MESSAGE] Message from {}: {}".format(address, x))
+    print(x)
     heappush(buffer, Node(x['timestamp'], x['amount'], x['sender'], x['receiver']))
+    print(buffer)
+
+
+def broadcastTransaction():
+    pass
 
 
 def inputTransactions():
@@ -136,58 +142,72 @@ def inputTransactions():
     while True:
         raw_type = input("Please enter your transaction:")
         s = raw_type.split(' ')
+        print(s)
 
         if s[0] == 'T':
             timestamp = clientClock()
+            print(timestamp)
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
 
-            while len(buffer) > 0:
+            print(buffer)
+            # balance = block.traverse()
+            time.sleep(25)
+            while (len(buffer) > 0):
                 y = heappop(buffer)
-                block.push(y)
-
-            balance = block.traverse()
-
-            if s[1] == 'B':
-                if balance < int(s[3]):
-                    print("INCORRECT")
+                print(y.timestamp)
+                if (y.timestamp <= timestamp):
+                    block.push(y)
                 else:
-                    print("SUCCESS")
-                    print(f"Balance before transaction {balance}")
-                    print(f"Balance after transaction {balance - int(s[3])}")
-                    heappush(buffer, Node(timestamp, s[3], s[1], s[2]))
-                    for sock in range(len(client_sockets)):
-                        sock.send(bytes(b))
-            elif s[2] == 'B':
-                print("SUCCESS")
-                print(f"Balance before transaction: {balance}")
-                print(f"Balance after transaction {balance + int(s[3])}")
+                    heappush(buffer, y)
+                    break
+
+            validity, balance = block.traverse()
+            if (balance >= int(s[3])):
                 heappush(buffer, Node(timestamp, s[3], s[1], s[2]))
-                for sock in range(len(client_sockets)):
-                    sock.send(bytes(b))
+                print("SUCCESS")
 
-            time.sleep(20 + random.randint(1, 6))
+                connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                connect_socket.connect_ex((SERVER, 5051))
+                connect_socket.send(bytes(b))
+
+            else:
+                print("INCORRECT")
+            print(validity, balance)
+            print(client_time_at_sync)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
-        elif s[0] == 'b':
-            while len(buffer) > 0:
-                y = heappop(buffer)
-                block.push(y)
+        elif s[0] == 'B':
+            timestamp = clientClock()
+            print(timestamp)
 
-            balance = block.traverse()
-            print(f"Balance after transaction {balance}")
+            # balance = block.traverse()
+            time.sleep(25)
+            while (len(buffer) > 0):
+                y = heappop(buffer)
+                print(y.timestamp)
+                if (y.timestamp <= timestamp):
+                    block.push(y)
+                else:
+                    heappush(buffer, y)
+                    break
+
+            validity, balance = block.traverse()
+            print(balance)
 
 
 if __name__ == '__main__':
+
     bind_socket.bind(ADDRESS)
     bind_socket.listen()
     clock_socket.connect((SERVER, 5050))
-
-    for i in range(1, 4):
-        if i != 2:
-            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            connect_socket.connect_ex((SERVER, 5050 + i))
-            client_sockets.append(connect_socket)
+    client_sockets = []
+    # for i in range(1, 3):
+    #     if i != 1:
+    #         connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    #         connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+    #         connect_socket.connect_ex((SERVER, 5050 + i))
+    #         client_sockets.append(connect_socket)
 
     clock_thread = threading.Thread(target=synchronizeTime)
     clock_thread.start()

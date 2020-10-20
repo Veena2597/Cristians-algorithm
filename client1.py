@@ -5,8 +5,10 @@ from dateutil import parser
 from timeit import default_timer
 import threading
 import logging
+import sys
 import pickle
 from heapq import *
+
 
 HEADER = 64
 PORT = 5051  # Figure out more about port configurations
@@ -59,23 +61,18 @@ class Blockchain:
     def traverse(self):
         temp = self.head
         balance = 10
-        validity = 1
         while temp:
             if temp.sender == 'A':
                 balance = balance - temp.amount
             elif temp.receiver == 'A':
                 balance = balance + temp.amount
             temp = temp.next
-        if balance < 0:
-            validity = 0
-        return validity, balance
+        return balance
 
 
 def clientClock():
     global clock_server_time
     global client_time_at_sync
-
-
     current_sys_time = datetime.datetime.now().timestamp()
     current_sim_time = client_time_at_sync.timestamp() + (current_sys_time - clock_server_time.timestamp()) * 1.5
     return current_sim_time
@@ -127,9 +124,6 @@ def listenTransaction(connection,address):
     heappush(buffer, Node(x['timestamp'],x['amount'],x['sender'],x['receiver']))
     print(buffer)
 
-def broadcastTransaction():
-    pass
-
 
 def inputTransactions():
     global client_time_at_sync
@@ -148,23 +142,43 @@ def inputTransactions():
             print(timestamp)
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
-            heappush(buffer, Node(timestamp, s[3], s[1], s[2]))
-            print(buffer)
 
-            for sock in range(len(client_sockets)):
-                sock.send(bytes(b))
-
-            time.sleep(2)
-            while len(buffer) > 0:
+            time.sleep(20 + random.randint(1,6))
+            while (len(buffer) > 0):
                 y = heappop(buffer)
-                block.push(y)
+                print(y.timestamp)
+                if (y.timestamp <= timestamp):
+                    block.push(y)
+                else:
+                    heappush(buffer, y)
+                    break
 
-            validity, balance = block.traverse()
-            print(validity, balance)
-            print(client_time_at_sync)
+            balance = block.traverse()
+            if(balance>=int(s[3])):
+                heappush(buffer,Node(timestamp,s[3],s[1],s[2]))
+                print("SUCCESS")
+                for sock in range(len(client_sockets)):
+                    sock.send(bytes(b))
+            else:
+                print("INCORRECT")
+            print(balance)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
-        elif s[0] == 'b':
-            pass
+        elif s[0] == 'B':
+            timestamp = clientClock()
+            print(timestamp)
+
+            time.sleep(20 + random.randint(1,6))
+            while (len(buffer) > 0):
+                y = heappop(buffer)
+                print(y.timestamp)
+                if (y.timestamp <= timestamp):
+                    block.push(y)
+                else:
+                    heappush(buffer, y)
+                    break
+
+            balance = block.traverse()
+            print(balance)
 
 
 if __name__ == '__main__':
@@ -174,11 +188,11 @@ if __name__ == '__main__':
     clock_socket.connect((SERVER, 5050))
     client_sockets = []
     for i in range(1, 4):
-        if i != 1:
-            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            connect_socket.connect_ex((SERVER, 5050 + i))
-            client_sockets.append(connect_socket)
+         if i != 1:
+             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+             connect_socket.connect_ex((SERVER, 5050 + i))
+             client_sockets.append(connect_socket)
 
     clock_thread = threading.Thread(target=synchronizeTime)
     clock_thread.start()
@@ -193,8 +207,6 @@ if __name__ == '__main__':
 
         listen_transactions = threading.Thread(target=listenTransaction, args=(connection,address))
         listen_transactions.start()
-        #
-        # broadcast_transaction = threading.Thread(target=broadcastTransaction, args=connection)
-        # broadcast_transaction.start()
+
     clock_socket.close()
     bind_socket.close()
