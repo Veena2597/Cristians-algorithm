@@ -5,8 +5,8 @@ from dateutil import parser
 from timeit import default_timer
 import threading
 import logging
-import sys
 import pickle
+from heapq import *
 
 HEADER = 64
 PORT = 5051  # Figure out more about port configurations
@@ -148,12 +148,19 @@ def inputTransactions():
             print(timestamp)
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
-            buffer.append(b)
+            heappush(buffer, Node(timestamp, s[3], s[1], s[2]))
+            print(buffer)
 
             for sock in range(len(client_sockets)):
                 sock.send(bytes(b))
 
-            connect_socket.send(bytes(b))
+            time.sleep(2)
+            while len(buffer) > 0:
+                y = heappop(buffer)
+                block.push(y)
+
+            validity, balance = block.traverse()
+            print(validity, balance)
             print(client_time_at_sync)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
         elif s[0] == 'b':
