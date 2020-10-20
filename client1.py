@@ -151,12 +151,8 @@ def inputTransactions():
 
 
 
-            heappush(buffer,Node(timestamp,s[3],s[1],s[2]))
             print(buffer)
-            connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-            connect_socket.connect_ex((SERVER, 5052))
-            connect_socket.send(bytes(b))
+            #balance = block.traverse()
             time.sleep(25)
             while (len(buffer) > 0):
                 y = heappop(buffer)
@@ -168,10 +164,27 @@ def inputTransactions():
                     break
 
             validity, balance = block.traverse()
+            if(balance>=int(s[3])):
+                heappush(buffer,Node(timestamp,s[3],s[1],s[2]))
+                print("SUCCESS")
+
+                connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                connect_socket.connect_ex((SERVER, 5052))
+                connect_socket.send(bytes(b))
+
+            else:
+                print("INCORRECT")
             print(validity,balance)
             print(client_time_at_sync)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
         elif s[0] == 'B':
+            timestamp = clientClock()
+            print(timestamp)
+
+
+            # balance = block.traverse()
+            time.sleep(25)
             while (len(buffer) > 0):
                 y = heappop(buffer)
                 print(y.timestamp)
@@ -180,6 +193,9 @@ def inputTransactions():
                 else:
                     heappush(buffer, y)
                     break
+
+            validity, balance = block.traverse()
+            print(balance)
 
 
 if __name__ == '__main__':
