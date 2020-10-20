@@ -77,8 +77,6 @@ class Blockchain:
 def clientClock():
     global clock_server_time
     global client_time_at_sync
-
-
     current_sys_time = datetime.datetime.now().timestamp()
     current_sim_time = client_time_at_sync.timestamp() + (current_sys_time - clock_server_time.timestamp()) * 1.5
     return current_sim_time
@@ -128,7 +126,9 @@ def listenTransaction(connection,address):
     x = pickle.loads(msg)
     print(x)
     heappush(buffer, Node(x['timestamp'],x['amount'],x['sender'],x['receiver']))
+
     print(buffer)
+
 
 def broadcastTransaction():
     pass
@@ -152,27 +152,39 @@ def inputTransactions():
             tran = {'sender': s[1], 'receiver': s[2], 'amount': s[3], 'timestamp': timestamp}
             b = pickle.dumps(tran)
 
-
-
             heappush(buffer,Node(timestamp,s[3],s[1],s[2]))
-            print(buffer)
             # for sock in (client_sockets):
             #     sock.send(bytes(b))
             connect_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             connect_socket.connect_ex((SERVER, 5051))
             connect_socket.send(bytes(b))
-            time.sleep(2)
+            time.sleep(25)
             while (len(buffer) > 0 ):
                 y = heappop(buffer)
-                block.push(y)
+                print(y.timestamp)
+                if(y.timestamp <= timestamp):
+                    block.push(y)
+                else:
+                    heappush(buffer,y)
+                    break
 
             validity, balance = block.traverse()
             print(validity,balance)
             print(client_time_at_sync)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
-        elif s[0] == 'b':
-            pass
+        elif s[0] == 'B':
+
+            while (len(buffer) > 0 ):
+                y = heappop(buffer)
+                print(y.timestamp)
+                if (y.timestamp <= timestamp):
+                    block.push(y)
+                else:
+                    heappush(buffer, y)
+                    break
+            validity, balance = block.traverse()
+            print(validity, balance)
 
 
 if __name__ == '__main__':

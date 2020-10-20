@@ -161,17 +161,29 @@ def inputTransactions():
             connect_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             connect_socket.connect_ex((SERVER, 5052))
             connect_socket.send(bytes(b))
-            time.sleep(2)
-            while (len(buffer) > 0 ):
+            time.sleep(25)
+            while (len(buffer) > 0):
                 y = heappop(buffer)
-                block.push(y)
+                print(y.timestamp)
+                if (y.timestamp <= timestamp):
+                    block.push(y)
+                else:
+                    heappush(buffer, y)
+                    break
 
             validity, balance = block.traverse()
             print(validity,balance)
             print(client_time_at_sync)
             # update blockchain and traverse it till the current node. Check amount and validity of transaction
-        elif s[0] == 'b':
-            pass
+        elif s[0] == 'B':
+            while (len(buffer) > 0):
+                y = heappop(buffer)
+                print(y.timestamp)
+                if (y.timestamp <= timestamp):
+                    block.push(y)
+                else:
+                    heappush(buffer, y)
+                    break
 
 
 if __name__ == '__main__':
