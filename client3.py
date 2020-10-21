@@ -82,14 +82,17 @@ def synchronizeTime():
 
     # Client sends CLOCK_REQUEST to the clock server and the request time is recorded
     while True:
-        request_time = default_timer()
+        request_time = clientClock()
         clock_socket.send(CLOCK_REQUEST.encode(FORMAT))
         logging.debug("[CLOCK SERVER] Requested time from server at {}".format(request_time))
 
         # Client receives time from the clock server and the response time is recorded
-        clock_server_time = parser.parse(clock_socket.recv(1024).decode(FORMAT))
-        response_time = default_timer()
-        actual_time = datetime.datetime.now()
+        clock_time = parser.parse(clock_socket.recv(1024).decode(FORMAT))
+        response_time = clientClock()
+        clock_server_time = clock_time
+        logging.debug("[CLOCK SERVER] Response from server at {}".format(response_time))
+
+        actual_time = datetime.datetime.fromtimestamp(response_time)
         logging.debug("[CLOCK SERVER] Time received from clock server {}".format(str(clock_server_time)))
 
         # Delay between request sent and response received is calculated
